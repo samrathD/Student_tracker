@@ -13,13 +13,15 @@
             <th>Password</th>
             <th>Age</th>
             <th>HairColour</th>
+            <th>GPA</th>
     
         </tr>
         <tr th:each="user : ${us}">
             <td th:text="${user.name}"></td>
-            <td th:text="${user.password}"></td>
-            <td th:text="${user.age}"></td>
+            <td th:text="${user.weight}"></td>
+            <td th:text="${user.height}"></td>
             <td th:text="${user.hair_colour}"></td> 
+            <td th:text="${user.gpa}"></td> 
             <!-- _____ is the one you use in Users users.______  -->
        
         </tr>

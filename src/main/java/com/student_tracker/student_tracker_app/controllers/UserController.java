@@ -37,10 +37,11 @@ public class UserController {
     public String adduser(@RequestParam Map<String,String>newuser,HttpServletResponse response) {
         System.out.println("Add user");
         String newName = newuser.get("name");
-        String newPwd = newuser.get("password");
-        int newSize = Integer.parseInt(newuser.get("size") );  
+        int newWeight = Integer.parseInt(newuser.get("weight"));
+        int newHeight = Integer.parseInt(newuser.get("height"));
         String newHairColour = newuser.get("hairColour"); 
-        userRepo.save(new User(newName,newPwd,newSize,newHairColour)); 
+        Double newGpa = Double.parseDouble(newuser.get("gpa") );  
+        userRepo.save(new User(newName,newWeight,newHeight,newHairColour,newGpa)); 
         response.setStatus(201);
         return "users/addedUser";
     }
