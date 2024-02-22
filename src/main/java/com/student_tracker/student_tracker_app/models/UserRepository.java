@@ -7,4 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserRepository extends JpaRepository<User,Integer> {
     List<User> findByName(String name);
     List<User> findByHeightAndWeight(int height, int weight);
+    List<User> findByUid(int uid);
 }
