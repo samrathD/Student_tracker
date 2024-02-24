@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel = "stylesheet" href = "/afterMsg.css">
 </head>
 <body>
-    <h1>Student Successfully Deleted!</h1>
-    <button>View All Students</button>
-    <button>Add a new Student</button>
+    <div class="heading">
+        <h1>Student Successfully Deleted!</h1>
+        <p>You can add or view all students</p>
+    </div>
+    
+    <div class = "buttons">
+        <button class = "display box">View All Students</button>
+        <button class = "add box">Add a new Student</button>
+    </div>
+    
+
+    <script>
+        let add = document.querySelector(".add");
+        let display = document.querySelector(".display");
+
+        //Guide user to add student page
+        //Guide user to add student page
+        add.addEventListener("click",()=>{
+            let addEndpoint = `/add.html`;
+            window.location.href = addEndpoint;
+        })
+
+        display.addEventListener("click",()=>{
+            let displayEndpoint = `/students/view`;
+            window.location.href = displayEndpoint;
+        })
+   </script>
 </body>
 </html>

@@ -7,32 +7,15 @@
     <link rel ="stylesheet" href="/showStyle.css">
 </head>
 <body>
-    <h1>USERS</h1>
-    <!-- <table style="border: 1px;">
-        <tr>
-            <th>Name</th>
-            <th>Password</th>
-            <th>Age</th>
-
-            <th>HairColour</th>
-            <th>GPA</th>
+    <div class = "heading">
+      <h1>Students</h1>  
+    </div>
     
-        </tr>
-        <tr th:each="student : ${us}">
-            <td th:text="${student.name}"></td>
-            <td th:text="${student.weight}"></td>
-            <td th:text="${student.height}"></td>
-            <td th:text="${student.hair_colour}"></td> 
-            <td th:text="${student.gpa}"></td>  -->
-            <!-- _____ is the one you use in Users users.______  -->
-        <!-- </tr>
-    </table> -->
-
     <div class = "container">
        <span th:each = "student: ${us}" class = "boxes">
-        <div th:id = "${student.uid}"
-         th:style="'height:' + ${student.height} + 'px ; width:'+${student.weight}+'px'+
-         '; margin-top:6px'">
+        <div class = "rectangle" th:id = "${student.uid}"
+         th:style="'height:' + ${student.height} + 'pt ; width:'+${student.weight}+'pt'+
+         '; margin-top:6pt'">
             <span th:style = "'color:'+ ${student.hair_colour}"
                     th:text = "${student.name}">
             </span>
@@ -40,13 +23,14 @@
             <span th:text = "'GPA:'+${student.gpa}">
             </span>
             <br>
-            <button th:id = "${student.uid}" class = "update">Update</button>
-            <button th:id = "${student.uid}" class = "delete">Delete</button>  
+            <button th:id = "${student.uid}" class = "update box">Update</button>
+            <button th:id = "${student.uid}" class = "delete box">Delete</button>  
     </div>
 
     </span>
  
     </div>
+    <button class ="add box">Add Student</button>
     
 
 

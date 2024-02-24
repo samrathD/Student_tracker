@@ -5,48 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel = "stylesheet" href = "/add.css">
 </head>
 <body>
+	<div class = "container1">
+		<h1 class="text-center mt-5 mb-4">Update a Student</h1>
+	</div>	
     <main class="container-fluid">
 		<div class="row justify-content-center">
-			<div class="col-md-4">
-				<h1 class="text-center mt-5 mb-4">Update Student</h1>
-
+			<div class="col-md-4 container2">
             <span th:each = "student:${us}">
                 <!-- Add values based on the ID of the student -->
-				<form th:action="'/students/updated/'+${student.uid}" method="post">
-					<input type="hidden" name="_method" value="put" />
-					<!-- other form fields -->
-				
-                    
+				<form class="form" th:action="'/students/updated/'+${student.uid}" method="post">
+					<p class="title">New Student </p>
+
+					<input type="hidden" name="_method" value="put" />                    
 					<div class="mb-3">
-						
-						<input type="text" id="name" name="name" class="form-control form-control-lg" 
+						<input type="text" id="name" name="name" class="form-control form-control-lg input" 
                             placeholder="Name" th:value = "${student.name}">
 					</div>
 					<div class="mb-3">
 						
-						<input type="number" id="weight" name="weight" class="form-control form-control-lg" 
+						<input type="number" id="weight" name="weight" class="form-control form-control-lg input" 
                             placeholder="Weight" th:value = "${student.weight}">
 					</div>
                     <div class="mb-3">
 						
-						<input type="number" id="height" name="height" class="form-control form-control-lg" 
+						<input type="number" id="height" name="height" class="form-control form-control-lg input" 
                             placeholder="height" th:value = "${student.height}">
 					</div>
 					<div class="mb-3">
 						
-						<input type="text" id="hairColour" name="hairColour" class="form-control form-control-lg" 
+						<input type="text" id="hairColour" name="hairColour" class="form-control form-control-lg input" 
                             placeholder="Hari Colour" th:value = "${student.hair_colour}">
 					</div>
 					<div class="mb-3">
 						
-						<input type="number" step = "any" id="gpa" name="gpa" class="form-control form-control-lg" 
+						<input type="number" step = "any" id="gpa" name="gpa" class="form-control form-control-lg input" 
                             placeholder="GPA" th:value = "${student.gpa}">
 					</div>
 					<!-- Submit button -->
                     <div class="d-grid gap-2">
-                        <input class="btn btn-primary" type="submit" value="UPDATE"></input>
+                        <input class="btn submit " type="submit" value="UPDATE"></input>
                     </div>
 
                     

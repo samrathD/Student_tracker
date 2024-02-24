@@ -1,6 +1,7 @@
 //Accessing the button
 let updateStudents = document.querySelectorAll(".update");
 let deleteStudents = document.querySelectorAll(".delete");
+let add = document.querySelector(".add");
 
 // update.addEventListener("click",()=>{
 //     console.log("Hello");
@@ -25,3 +26,8 @@ for(let student of deleteStudents){
         window.location.href = deleteEndpoint;
     })
 }
+
+add.addEventListener("click",()=>{
+    let addEndpoint = `/add.html`;
+    window.location.href = addEndpoint;
+})

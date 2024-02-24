@@ -1,0 +1,130 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: #3c6e71;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.container1{
+    height:100vh;
+    width:75vw;
+    background-color:#f7b538;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition:all 0.5s ease-in-out;
+    z-index: 1;
+}
+.container1:hover{
+    transform:scale(1.2);
+    color:white;
+    background-color: #db7c26;
+}
+h1{
+    font-size: 4rem;
+}
+.container2{
+    height:100vh;
+    width:50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:all 0.5s ease-in-out
+}
+.container2:hover{
+    transform:scale(1.1);
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* max-width: 350px; */
+    width:30rem;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .title {
+    font-size: 28px;
+    color: #db7c26;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #db7c26;
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: #db7c26;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+
+  .form .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
+  .form .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form .input:focus + span,.form .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background-color: #db7c26;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    font-size: 1.5rem;
+    transition: .3s all ease-out;
+  }
+  
+  .submit:hover {
+    background-color: #db7c26;
+    transform: scale(1.1);
+    color:white;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
