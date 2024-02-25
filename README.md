@@ -13,9 +13,9 @@ The Student Management Application is a web-based system built using Spring Boot
 1. Clone the repository to your local machine.
 2. Install PostgreSQL and create a database named "student_management".
 3. Update the `application.properties` file with your PostgreSQL database credentials.
-4. Build the application using Maven: `mvn clean install`.
-5. Run the application: `java -jar target/student-management-1.0.jar`.
-6. Access the application at `https://samrath-student-tracker.onrender.com` in your web browser.
+5. Run the application: `student_tracker_app/src/main/java/com/student_tracker/student_tracker_app/StudentTrackerAppApplication.java`.
+6. Access the application using `localhost:8080/index.html`.
+7. Can also access the deployed application at `https://samrath-student-tracker.onrender.com`.
 
 ## Usage
 1. **Adding a New Student:**
