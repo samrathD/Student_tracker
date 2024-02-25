@@ -1,6 +1,6 @@
 let add = document.querySelector(".add");
-let update = document.querySelector(".update");
-let deleteStudent = document.querySelector(".delete");
+// let update = document.querySelector(".update");
+// let deleteStudent = document.querySelector(".delete");
 let display = document.querySelector(".display");
 
 //Guide user to add student page
