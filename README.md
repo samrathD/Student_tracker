@@ -33,3 +33,6 @@ The Student Management Application is a web-based system built using Spring Boot
 
 4. **Viewing Student Data:**
    - All student records are displayed on the main page, including their names(in their hair colour), weights, heights,and GPAs.
+
+## UI Mockup
+![](UI_mockup.jpg)
